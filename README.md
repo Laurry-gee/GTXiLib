@@ -1,6 +1,8 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-## What is GTXiLib?
+
+[Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+**What is GTXiLib?
 GTXiLib, Google Toolbox for Accessibility for the iOS platform or simply GTX-eye
 is a framework for iOS accessibility testing. GTXiLib has XCTest integration and
 can be used with any XCTest-based frameworks such as
@@ -11,7 +13,7 @@ GTXiLib is able to accomplish this by hooking into the test tear-down process
 and invoking the registered accessibility checks (such as check for presence of
 accessibility label) on all elements on the screen.
 
-## Getting Started
+**Getting Started**
 
 To install GTXiLib on all the tests of a specific test class add the following
 snippet of code to it.
@@ -74,14 +76,14 @@ Note that GTX is being added to `+setUp` method, not the instance method
 
 To add GTXiLib to your project use [cocoapods](https://cocoapods.org/pods/GTXiLib).
 
-## Podfile
+**Podfile**
 If installing via CocoaPods, you need to add `GTXiLib` as a dependency in your Podfile. `GTXiLib` only runs in test processes, so do not add it to your main app's spec. Additionally, CocoaPods no longer requires `use_frameworks!`. `use_frameworks!` will cause your build to fail with error `ld: framework not found`. Your Podfile should look like:
 
 ```
 target 'myapp' do
-  # Configuration for app myapp
+  **myapp
 
-  # Note the lack of use_frameworks!
+  * Note the lack of use_frameworks!
 
   target 'myappTests' do
     inherit! :search_paths
@@ -92,7 +94,7 @@ target 'myapp' do
 end
 ```
 
-## CocoaPods and Swift
+** CocoaPods and Swift
 GTXiLib supports Swift projects. The installation instructions are almost the same as for Objective-C projects. Your `Podfile` should look like
 ```
 use_modular_headers!
@@ -100,11 +102,11 @@ target "NameOfYourProject" do
   pod "GTXiLib"
 end
 ```
-with an optional version specifier for "GTXiLib". Note the `use_modular_headers!` line and the **lack** of `use_frameworks!`. As of [CocoaPods 1.5.0](https://blog.cocoapods.org/CocoaPods-1.5.0/), `use_frameworks!` is no longer required for Swift projects. `use_frameworks!` makes `Abseil`, which is a dependency of `GTXiLib`, fail to import properly. Thus, you cannot use `use_frameworks!`, which means you must use `use_modular_headers!`. You may also specify `:modular_headers => true` on a per-pod basis. Then, add `import GTXiLib` to your Swift files, and you can use GTXiLib APIs.
+with an optional version specifier for "GTXiLib". Note the `use_modular_headers!` line and the <--!lack of `use_frameworks!`. As of [CocoaPods 1.5.0](https://blog.cocoapods.org/CocoaPods-1.5.0/), `use_frameworks!` is no longer required for Swift projects. `use_frameworks!` makes `Abseil`, which is a dependency of `GTXiLib`, fail to import properly. Thus, you cannot use `use_frameworks!`, which means you must use `use_modular_headers!`. You may also specify `:modular_headers => true` on a per-pod basis. Then, add `import GTXiLib` to your Swift files, and you can use GTXiLib APIs.
 
-If your project does not contain Swift files, `use_modular_headers!` is optional.
+If your project does not contain Swift files, `use_modular_headers` is optional.
 
-## Incremental Accessibility
+**Incremental Accessibility**
 
 GTXiLib APIs support a practical solution for improving accessibility of large
 projects which may not have included accessibility from the get-go -- incremental
