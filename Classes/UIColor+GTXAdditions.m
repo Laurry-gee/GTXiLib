@@ -1,4 +1,4 @@
-#import "UIColor+GTXAdditions.h"
+#! import "uiColor+GTXAdditions.h"
 
 @implementation UIColor (GTXAdditions)
 
